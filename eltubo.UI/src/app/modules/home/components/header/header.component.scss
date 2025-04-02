@@ -1,7 +1,84 @@
-
 .card {
     background: var(--surface-card);
     padding: 2rem;
     border-radius: 10px;
     margin-bottom: 1rem;
+}
+
+:host ::ng-deep .p-carousel .p-carousel-indicators {
+    display: none !important;
+}
+
+:host ::ng-deep .p-carousel-next {
+    display: none !important;
+}
+:host ::ng-deep .p-carousel-prev {
+    display: none !important;
+}
+
+// header
+.card-1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 2rem;
+}
+
+.header-info,
+.header-carousel {
+    flex: 1;
+    min-width: 300px; // Asegura que no sean demasiado pequeños en pantallas reducidas
+}
+
+.header-info {
+    text-align: left;
+
+    h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #6d9f5c; // Verde similar al de la imagen
+    }
+
+    h5 {
+        font-size: 1.5rem;
+        font-style: italic;
+        color: gray;
+    }
+
+    p {
+        font-size: 1rem;
+        color: #444;
+        max-width: 500px;
+        line-height: 1.5;
+    }
+
+    a {
+        display: inline-block;
+        background-color: #6d9f5c;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        margin-top: 10px;
+        transition: background 0.3s;
+
+        &:hover {
+            background-color: #5a874e;
+        }
+    }
+}
+
+// Diseño adaptable para pantallas pequeñas
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-info {
+        text-align: center;
+    }
 }

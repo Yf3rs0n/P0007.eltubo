@@ -19,7 +19,7 @@
     flex-basis: 200px;
     align-items: center;   
 }
-::ng-deep .p-carousel-container{
+:host ::ng-deep .p-carousel-container {
     background: linear-gradient(to right, #35383a 50%, #354f3d 50%);
     border-radius: 10px;
 }

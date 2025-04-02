@@ -5,10 +5,50 @@
     border-radius: 10px;
     margin-bottom: 1rem;
 }
+.footer-info {
+    border-radius: 10px 10px 0 0;
+    background-color: #354f3d; // Color de fondo similar al de la imagen
+    padding: 20px;
+    display: flex;
+    justify-content: center; // Centra los elementos horizontalmente
+    gap: 100px; // Espacio entre las columnas
+    color: #fff;
+}
+
+.footer-logo,
+.footer-links {
+    text-align: center; // Alineación de texto centrada
+}
+
+.footer-logo h5,
+.footer-links h5 {
+    font-weight: bold;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-top: 5px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+// --------------
 .site-info {
     color: #fff;
     background-color: #35383a;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
     display: flex;
     justify-content: center; // Centra horizontalmente los elementos
     align-items: center; // Centra verticalmente los elementos

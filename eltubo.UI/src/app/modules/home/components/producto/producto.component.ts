@@ -11,7 +11,7 @@ export class ProductoComponent implements OnInit {
   products: Product[] = [];
 
   responsiveOptions: any[] | undefined;
-linear: any;
+  linear: any;
 
   constructor(private productService: ProductService) {}
 

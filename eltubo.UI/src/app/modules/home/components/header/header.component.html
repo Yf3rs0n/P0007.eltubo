@@ -1,3 +1,32 @@
 <div class="card">
     <p-menubar [model]="items" />
 </div>
+<div class="card">
+    <div class="card-1">
+        <div class="header-info">
+            <h3>Café</h3>
+            <h5>El Tubo</h5>
+            <p>
+                Nuestro café es el fruto de un cuidado cultivo en las fértiles tierras a orillas del Río Frío, un lugar
+                donde la biodiversidad florece. 🌿 Además de disfrutar del exquisito sabor de nuestro café, este entorno
+                ofrece la oportunidad de avistar una gran variedad de animales que habitan en la región. 🦜🦋
+            </p>
+            <a href="#">Contáctanos</a>
+        </div>
+        <div class="header-carousel">
+            <p-carousel [value]="images" [numVisible]="1" [numScroll]="1" [responsiveOptions]="responsiveOptions"
+                [circular]="true" [autoplayInterval]="3000">
+                <ng-template let-image pTemplate="item">
+                    <div class="m-2 p-3">
+                        <div class="mb-3">
+                            <div class="relative mx-auto">
+                                <img src="/assets/img_cafe/{{ image.code }}" [alt]="image.name" width="100%"
+                                    class="w-full border-round" />
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-carousel>
+        </div>
+    </div>
+</div>
