@@ -1,37 +1,28 @@
 <div class="card">
-    <p-carousel 
-        [value]="products" 
-        [numVisible]="1" 
-        [numScroll]="1" 
-        [circular]="false" 
-        [circular]="true" 
+    <p-carousel [value]="products" [numVisible]="1" [numScroll]="1" [circular]="false" [circular]="true"
         [responsiveOptions]="responsiveOptions">
-            <ng-template let-product pTemplate="item">
-                <div class="border-1 surface-border border-round m-2 p-3">
-                    <div class="container-slide">
-                        <div class="item">
-                            <p>hola informacion</p>
+        <ng-template let-product pTemplate="item">
+            <div>
+                <div class="container-slide">
+                    <!--Imagen del centro-->
+                    <div class="item">
+                        <div class="relative mx-auto">
+                            <img src="/assets/{{ product.image }}" alt="{{ product.name }}" width="100%"
+                                class="w-full border-round">
                         </div>
-                        <!--Imagen del centro-->
-                        <div class="item">
-                            <div class="relative mx-auto">
-                                <img src="https://cdn.shopify.com/s/files/1/0686/7019/3906/files/BOLSA10.webp?v=1711128889" width="100%" class="w-full border-round">
-                            </div>
-                        </div>
-                        <!--Imagen del centro-->
-                        <!-- Informacion del producto -->
-                        <div class="item">
-                            <div class="product-home-info">
-                                <div class="bloqueone">
-                                <div class="estado"><img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}"></div>
+                    </div>
+                    <!--Imagen del centro-->
+                    <!-- Informacion del producto -->
+                    <div class="item">
+                        <div class="product-home-info">
+                            <div class="bloqueone">
                                 <h2>FINCA LA MARIA</h2>
-                                <p class="">SALGAR . ANTIOQUIA . COLOMBIA</p>
+                                <p class="">Támesis . Antioquia . Colombia</p>
                             </div>
                             <div class="bloquetwo">
                                 <h3>{{ product.name }}</h3>
                                 <p>Notas a almendras, frutos secos, chocolate y panela</p>
-                                <h3 class="precio">{{ '$' + product.price }}</h3>
-                                
+                                <h3 class="precio">{{ formatPrice(product.price) }}</h3>
                                 <div class="btns-grupo">
                                     <span>
                                         <p-button icon="pi pi-heart" severity="secondary" [outlined]="true" />
@@ -39,11 +30,11 @@
                                     </span>
                                 </div>
                             </div>
-                            </div>
                         </div>
-                        <!-- Informacion del producto -->
                     </div>
+                    <!-- Informacion del producto -->
                 </div>
-            </ng-template>
+            </div>
+        </ng-template>
     </p-carousel>
 </div>

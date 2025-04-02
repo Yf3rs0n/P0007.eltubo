@@ -11,6 +11,7 @@ export class ProductoComponent implements OnInit {
   products: Product[] = [];
 
   responsiveOptions: any[] | undefined;
+linear: any;
 
   constructor(private productService: ProductService) {}
 
@@ -27,7 +28,7 @@ export class ProductoComponent implements OnInit {
       },
       {
         breakpoint: '991px',
-        numVisible: 2,
+        numVisible: 1,
         numScroll: 1,
       },
       {
@@ -50,4 +51,9 @@ export class ProductoComponent implements OnInit {
         return 'secondary'; // Map "unknown" to a valid type
     }
   }
+
+  formatPrice(price: number): string {
+    return `$${price.toLocaleString('es-CO')}`; // Formato con puntos
+  }
+  
 }

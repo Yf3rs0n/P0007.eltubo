@@ -1,5 +1,5 @@
 .card {
-    background: linear-gradient(to right, #3498db 50%, #e74c3c 50%);
+    background: var(--surface-card);
     padding: 2rem;
     border-radius: 10px;
     margin-bottom: 1rem;
@@ -11,10 +11,15 @@
     flex-wrap: wrap;
     gap: 10px;
     align-items: center;
-    max-width: 1080px;
+    max-width: 710px;
     margin: 0 auto;
 }
 .item {
     flex-grow: 1;
     flex-basis: 200px;
+    align-items: center;   
+}
+::ng-deep .p-carousel-container{
+    background: linear-gradient(to right, #35383a 50%, #354f3d 50%);
+    border-radius: 10px;
 }
