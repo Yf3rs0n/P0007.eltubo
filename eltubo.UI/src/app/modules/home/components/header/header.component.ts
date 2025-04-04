@@ -10,7 +10,6 @@ import { ImageService } from '../../services/imageservice';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent implements OnInit {
-  items: MenuItem[] | undefined;
   images: Image[] = [];
 
   constructor(private imageService: ImageService) {}
@@ -40,64 +39,5 @@ export class HeaderComponent implements OnInit {
         numScroll: 1,
       },
     ];
-    // Menu items for the header
-    this.items = [
-      {
-        label: 'Home',
-        icon: 'pi pi-home',
-      },
-      {
-        label: 'Features',
-        icon: 'pi pi-star',
-      },
-      {
-        label: 'Projects',
-        icon: 'pi pi-search',
-        items: [
-          {
-            label: 'Components',
-            icon: 'pi pi-bolt',
-          },
-          {
-            label: 'Blocks',
-            icon: 'pi pi-server',
-          },
-          {
-            label: 'UI Kit',
-            icon: 'pi pi-pencil',
-          },
-          {
-            label: 'Templates',
-            icon: 'pi pi-palette',
-            items: [
-              {
-                label: 'Apollo',
-                icon: 'pi pi-palette',
-              },
-              {
-                label: 'Ultima',
-                icon: 'pi pi-palette',
-              },
-            ],
-          },
-        ],
-      },
-      {
-        label: 'Contact',
-        icon: 'pi pi-envelope',
-      },
-    ];
-  }
-  getSeverity(status: string): 'success' | 'warning' | 'danger' | 'secondary' {
-    switch (status) {
-      case 'INSTOCK':
-        return 'success';
-      case 'LOWSTOCK':
-        return 'warning';
-      case 'OUTOFSTOCK':
-        return 'danger';
-      default:
-        return 'secondary'; // Map "unknown" to a valid type
-    }
   }
 }

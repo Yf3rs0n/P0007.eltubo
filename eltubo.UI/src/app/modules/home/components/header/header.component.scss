@@ -16,20 +16,40 @@
     display: none !important;
 }
 
-// header
 .card-1 {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: stretch; // Asegura que ambos elementos tengan la misma altura
     justify-content: center;
     gap: 20px;
     padding: 2rem;
+    border-radius: 10px;
+    background: #F8F3E7;
 }
 
 .header-info,
 .header-carousel {
-    flex: 1;
-    min-width: 300px; // Asegura que no sean demasiado pequeños en pantallas reducidas
+    flex: 1; // Hace que ambos tengan el mismo tamaño
+    min-width: 300px; // Evita que se reduzcan demasiado en pantallas pequeñas
+}
+
+.header-carousel {
+    display: flex;
+    align-items: center; // Centra el carrusel verticalmente si es necesario
+    justify-content: center;
+}
+
+// Diseño adaptable para pantallas pequeñas
+@media (max-width: 768px) {
+    .card-1 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-info,
+    .header-carousel {
+        width: 100%; // Ocupan todo el ancho en pantallas pequeñas
+    }
 }
 
 .header-info {
@@ -68,17 +88,5 @@
         &:hover {
             background-color: #5a874e;
         }
-    }
-}
-
-// Diseño adaptable para pantallas pequeñas
-@media (max-width: 768px) {
-    .card {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .header-info {
-        text-align: center;
     }
 }

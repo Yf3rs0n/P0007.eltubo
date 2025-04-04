@@ -11,6 +11,7 @@ import { HomeBienvenidaComponent } from './home-bienvenida.component';
 import { HeaderComponent } from '../components/header/header.component';
 import { ProductoComponent } from '../components/producto/producto.component';
 import { FooterComponent } from '../components/footer/footer.component';
+import { SidebarComponent } from '../components/sidebar/sidebar.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FooterComponent } from '../components/footer/footer.component';
     HomeBienvenidaComponent,
         HeaderComponent,
         ProductoComponent,
-        FooterComponent
+        FooterComponent,
+        SidebarComponent
   ],
   imports: [
     CommonModule,
